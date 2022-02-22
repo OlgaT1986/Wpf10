@@ -1,0 +1,126 @@
+﻿<Window x:Class="WpfTask10.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfTask10"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="900" Background="#FF9AB8B9">
+
+    <StackPanel>
+
+        <Border BorderBrush="White" BorderThickness="10"
+                HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Image Source="Data/T.JPG" Width="110" Height="110" x:Name="myImage1"/>
+            <Border.Effect>
+                <DropShadowEffect Color="#FF8FDAC9" Direction="90" ShadowDepth="20" Opacity="0.4"/>
+            </Border.Effect>
+            <Border.RenderTransform>
+                <TranslateTransform Y="50"/>
+            </Border.RenderTransform>
+        </Border>
+
+        <Border Width="130" Height="200" Margin="381,0">
+            <Border.Background>
+                <VisualBrush Visual="{Binding ElementName=myImage1}">
+                    <VisualBrush.Transform>
+                        <ScaleTransform ScaleX="1" ScaleY="-1" CenterX="115" CenterY="100">
+                        </ScaleTransform>
+                    </VisualBrush.Transform>
+                </VisualBrush>
+            </Border.Background>
+            <Border.OpacityMask>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Offset="0" Color="Black"></GradientStop>
+                    <GradientStop Offset="0.8" Color="Transparent"></GradientStop>
+                </LinearGradientBrush>
+            </Border.OpacityMask>
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="-0.957"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="60"/>
+                </TransformGroup>
+            </Border.RenderTransform>
+        </Border>
+
+        <Border BorderBrush="White" BorderThickness="10"
+                HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Image Source="Data/S.JPG" Width="180" Height="130" x:Name="myImage2"/>
+            <Border.Effect>
+                <DropShadowEffect Color="DarkGreen" Direction="40" ShadowDepth="20" Opacity="0.4"/>
+            </Border.Effect>
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <TranslateTransform X="200" Y="-340"/>
+                    <SkewTransform CenterX="0" CenterY="0" AngleX="0" AngleY="10"/>
+                </TransformGroup>
+            </Border.RenderTransform>
+        </Border>
+
+        <Border Width="220" Height="137" Margin="340,0,332,0">
+            <Border.Background>
+                <VisualBrush Visual="{Binding ElementName=myImage2}">
+                    <VisualBrush.Transform>
+                        <ScaleTransform ScaleX="1" ScaleY="-1" CenterX="215" CenterY="65">
+                        </ScaleTransform>
+                    </VisualBrush.Transform>
+                </VisualBrush>
+            </Border.Background>
+            <Border.OpacityMask>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Offset="0" Color="Black"></GradientStop>
+                    <GradientStop Offset="0.8" Color="Transparent"></GradientStop>
+                </LinearGradientBrush>
+            </Border.OpacityMask>
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <TranslateTransform X="85" Y="-320"/>
+                    <SkewTransform CenterX="30" CenterY="2" AngleX="-10" AngleY="0"/>
+                    <RotateTransform Angle="10"/>
+                </TransformGroup>
+            </Border.RenderTransform>
+        </Border>
+
+        <Border BorderBrush="White" BorderThickness="10"
+                HorizontalAlignment="Center" VerticalAlignment="Center" Margin="305,0,367,0">
+            <Image Source="Data/K.JPG" Width="180" Height="120" x:Name="myImage3"/>
+            <Border.Effect>
+                <DropShadowEffect Color="#FFC8E60A" Direction="-220" ShadowDepth="20" Opacity="0.4"/>
+            </Border.Effect>
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <TranslateTransform X="-200" Y="-580"/>
+                    <SkewTransform CenterX="0" CenterY="0" AngleX="0" AngleY="-10"/>
+                </TransformGroup>
+            </Border.RenderTransform>
+        </Border>
+
+        <Border Width="222" Height="133" Margin="300,0,370,0">
+            <Border.Background>
+                <VisualBrush Visual="{Binding ElementName=myImage3}">
+                    <VisualBrush.Transform>
+                        <ScaleTransform ScaleX="1" ScaleY="-1" CenterX="220" CenterY="65">
+                        </ScaleTransform>
+                    </VisualBrush.Transform>
+                </VisualBrush>
+            </Border.Background>
+            <Border.OpacityMask>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Offset="0" Color="Black"></GradientStop>
+                    <GradientStop Offset="0.8" Color="Transparent"></GradientStop>
+                </LinearGradientBrush>
+            </Border.OpacityMask>
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="0.99999999999999989" ScaleX="0.99999999999999989"/>
+                    <SkewTransform AngleX="20"/>
+                    <RotateTransform Angle="-9.572"/>
+                    <TranslateTransform X="-195.28184364411561" Y="-534.20544477906776"/>
+                </TransformGroup>
+            </Border.RenderTransform>
+        </Border>
+
+    </StackPanel>
+</Window>
